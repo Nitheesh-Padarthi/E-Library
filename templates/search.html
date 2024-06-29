@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search E-Books</title>
+</head>
+<body>
+    <h1>Search for E-Books</h1>
+    <form action="{{ url_for('search') }}" method="POST">
+        <input type="text" name="query" placeholder="Enter book title or author">
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

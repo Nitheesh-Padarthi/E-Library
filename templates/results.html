@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% for book in books %}
+        <div>
+            <h2>{{ book.volumeInfo.title }}</h2>
+            <p>{{ book.volumeInfo.description }}</p>
+            <a href="{{ url_for('borrow', book_id=book.id) }}">Borrow this book</a>
+        </div>
+    {% endfor %}
+</body>
+</html>

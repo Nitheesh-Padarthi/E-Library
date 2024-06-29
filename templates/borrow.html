@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrow E-Book</title>
+</head>
+<body>
+    <h1>Borrow E-Book</h1>
+    <h2>{{ book.volumeInfo.title }}</h2>
+    <p>{{ book.volumeInfo.description }}</p>
+    <form action="{{ url_for('borrow', book_id=book.id) }}" method="POST">
+        <input type="text" name="user" placeholder="Enter your name">
+        <button type="submit">Borrow</button>
+    </form>
+</body>
+</html>
